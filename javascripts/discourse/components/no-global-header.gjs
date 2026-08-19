@@ -19,8 +19,6 @@ export default class NoGlobalHeader extends Component {
         <span aria-hidden="true">/</span>
         <a href="https://nintendo-online.de/reviews">Reviews</a>
         <span aria-hidden="true">/</span>
-        <a href="https://nintendo-online.de/reports">Reports</a>
-        <span aria-hidden="true">/</span>
         <a
           class="no-global-header-nav-active"
           href="https://forum.nintendo-online.de/"

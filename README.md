@@ -17,14 +17,13 @@ Die Desktop-Navigation enthält fest diese Ziele:
 - NEWS: `https://nintendo-online.de/news`
 - SPIELE: `https://nintendo-online.de/games`
 - REVIEWS: `https://nintendo-online.de/reviews`
-- REPORTS: `https://nintendo-online.de/reports`
 - FORUM: `https://forum.nintendo-online.de/`
 
 Das Forum ist mit einer gelben Unterstreichung als aktiver Bereich markiert. Das Logo liegt als lokales Theme-Asset unter `assets/logo.svg`.
 
 ## Fonts und Dark Mode
 
-Die Component lädt dieselben DM-Sans- und DM-Mono-Webfonts wie Nintendo-Online direkt von `nintendo-online.de`. Damit stimmen Font-Familien und Gewichte des Brandings (`DM Sans`, 900) sowie der Navigation (`DM Mono`, 500) mit der Hauptseite überein.
+Die Component bündelt dieselben DM-Sans- und DM-Mono-Webfonts wie Nintendo-Online als lokale Theme-Assets (`assets/dm-sans-*.woff2`, `assets/dm-mono-*.woff2`). Damit stimmen Font-Familien und Gewichte des Brandings (`DM Sans`, 900) sowie der Navigation (`DM Mono`, 500) mit der Hauptseite überein — ohne externe Abhängigkeit und ohne CORS-Einschränkungen.
 
 Die helle Navigation folgt der Referenzfarbe `#454545`. Im Dark Mode ist die Schriftfarbe Weiß (`#fff`). Umgesetzt wird das über `light-dark(#454545, #fff)`, das dem von Discourse gesetzten `color-scheme` folgt – nicht der Browser-Präferenz `prefers-color-scheme`. Die Akzentfarbe bleibt `#FFC805`.
 
@@ -45,7 +44,7 @@ Der Core-Logo-Bereich wird per CSS ausgeblendet; die nativen Header-Icons und -M
 
 ## Bekannte Einschränkungen
 
-- Die Fonts `DM Sans` und `DM Mono` werden von `nintendo-online.de` geladen. Ist diese Quelle nicht erreichbar oder durch eine restriktive Content-Security-Policy blockiert, greifen die definierten System-Fallbacks.
+- Die Header-Höhe beträgt `72px` (4.5rem) und der Inhalt ist — wie auf Nintendo-Online — auf eine zentrierte `1092px`-Box begrenzt.
 - Auf extrem schmalen Desktop-Ansichten oder bei starkem Browser-Zoom kann der Core den Topic-Titel gegenüber dem Branding priorisieren. Die Header-Controls bleiben dabei nutzbar.
 
 ## Update-Hinweise

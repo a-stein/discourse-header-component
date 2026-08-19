@@ -10,7 +10,7 @@
   font-style: normal;
   font-weight: 400 900;
   font-display: swap;
-  src: url("https://nintendo-online.de/fonts/dm-sans/13971731025ec697-s.woff2") format("woff2");
+  src: url($dm-sans-var) format("woff2");
 }
 
 @font-face {
@@ -18,7 +18,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("https://nintendo-online.de/fonts/dm-mono/0e96d314a90a6138-s.woff2") format("woff2");
+  src: url($dm-mono-400) format("woff2");
 }
 
 @font-face {
@@ -26,7 +26,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("https://nintendo-online.de/fonts/dm-mono/b7ea2ab4a8ad1f81-s.woff2") format("woff2");
+  src: url($dm-mono-500) format("woff2");
 }
 
 .d-header {
@@ -68,7 +68,8 @@
 
 .no-global-header-brand {
   display: inline-flex;
-  flex: 0 0 auto;
+  flex: 0 1 auto;
+  min-width: 0;
   align-items: center;
   gap: 0.5rem;
   color: #454545;
@@ -96,6 +97,9 @@
 }
 
 .no-global-header-title {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: #454545;
   color: var(--no-header-text);
   font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -107,9 +111,9 @@
 
 .no-global-header-nav {
   display: none;
-  flex: 0 1 auto;
+  flex: 0 0 auto;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
   margin-left: 1rem;
   overflow: hidden;
   font-family: "DM Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;

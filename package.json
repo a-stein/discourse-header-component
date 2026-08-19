@@ -1,0 +1,23 @@
+{
+  "name": "no-2025-header-component",
+  "version": "1.0.0",
+  "description": "Eine Discourse Theme Component, die den nativen Discourse-Header um Nintendo-Online-Branding und globale Navigation erweitert. Sie erzeugt keinen zweiten Header und ersetzt nicht `.d-header`.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-stein/discourse-header-component.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/a-stein/discourse-header-component/issues"
+  },
+  "homepage": "https://github.com/a-stein/discourse-header-component#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0"
+  }
+}

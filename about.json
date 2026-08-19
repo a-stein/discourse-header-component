@@ -7,6 +7,9 @@
   "theme_version": "1.0.0",
   "minimum_discourse_version": "3.4.0",
   "assets": {
-    "no-logo": "assets/logo.svg"
+    "no-logo": "assets/logo.svg",
+    "dm-sans-var": "assets/dm-sans-13971731025ec697-s.woff2",
+    "dm-mono-400": "assets/dm-mono-0e96d314a90a6138-s.woff2",
+    "dm-mono-500": "assets/dm-mono-b7ea2ab4a8ad1f81-s.woff2"
   }
 }
