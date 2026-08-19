@@ -81,10 +81,6 @@
     color: #454545;
   }
 
-  &:hover {
-    color: var(--no-header-yellow);
-  }
-
   &:focus-visible {
     border-radius: 2px;
     outline: 3px solid var(--no-header-yellow);
@@ -101,6 +97,7 @@
 }
 
 .no-global-header-title {
+  color: #454545;
   font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: clamp(1.2rem, 2.3vw, 2.25rem);
   font-weight: 900;
@@ -153,7 +150,11 @@
 .no-global-header--dark .no-global-header-brand:visited,
 .no-global-header--dark .no-global-header-nav a,
 .no-global-header--dark .no-global-header-nav a:visited {
-  color: #f8fafc;
+  color: #fff;
+}
+
+.no-global-header--dark .no-global-header-title {
+  color: #fff;
 }
 
 @media (prefers-reduced-motion: reduce) {
