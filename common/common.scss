@@ -34,17 +34,6 @@
   color: var(--no-header-foreground);
 }
 
-.d-header > .wrap {
-  max-width: 1092px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-// Keep the header content width identical whether the sidebar is shown or hidden.
-body.has-sidebar-page .d-header > .wrap {
-  max-width: 1092px;
-}
-
 .d-header .home-logo-wrapper-outlet {
   display: none;
 }
