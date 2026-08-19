@@ -14,9 +14,27 @@
 }
 
 .d-header .home-logo-wrapper-outlet {
-  display: flex;
-  min-width: 0;
-  overflow: visible;
+  display: none;
+}
+
+.d-header .contents > .header-sidebar-toggle {
+  order: 1;
+}
+
+.d-header .contents > .no-global-header {
+  order: 2;
+}
+
+.d-header .contents > .extra-info-wrapper {
+  order: 3;
+}
+
+.d-header .contents > .header-search {
+  order: 4;
+}
+
+.d-header .contents > .panel {
+  order: 5;
 }
 
 .no-global-header {

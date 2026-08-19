@@ -36,10 +36,10 @@ Bei Instanzen, die die Sidebar komplett deaktiviert haben und ausschließlich da
 
 ## Verwendete Discourse APIs
 
-- `api.renderInOutlet("home-logo-wrapper", NoGlobalHeader)`: ersetzt ausschließlich den offiziellen Wrapper des Home-Logo-Bereichs.
+- `api.renderInOutlet("header-contents__before", NoGlobalHeader)`: ergänzt den mehrfach belegbaren offiziellen Header-Outlet. Flex-Order positioniert den Brand-Bereich neben dem nativen Sidebar-Trigger.
 - `api.addCommunitySectionLink(...)`: ergänzt die Links in der nativen Community-Sidebar.
 
-Die nativen Header-Icons und -Menüs werden nicht verändert. Das umfasst Suche, Benachrichtigungen, Chat, Login, Avatar und Staff-/Admin-Funktionen.
+Der Core-Logo-Bereich wird per CSS ausgeblendet; die nativen Header-Icons und -Menüs werden nicht verändert. Das umfasst Suche, Benachrichtigungen, Chat, Login, Avatar und Staff-/Admin-Funktionen.
 
 ## Bekannte Einschränkungen
 

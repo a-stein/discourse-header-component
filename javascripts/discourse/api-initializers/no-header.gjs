@@ -10,7 +10,8 @@ const mobileLinks = [
 ];
 
 export default apiInitializer((api) => {
-  api.renderInOutlet("home-logo-wrapper", NoGlobalHeader);
+  // This is a standard outlet, so it can coexist with other header components.
+  api.renderInOutlet("header-contents__before", NoGlobalHeader);
 
   mobileLinks.forEach(([name, text, href, icon]) => {
     api.addCommunitySectionLink({
