@@ -13,10 +13,6 @@
 // The template shows the navigation from the "lg" breakpoint (1092px) upwards.
 // Below that it is hidden and only available through the sidebar.
 @media screen and (min-width: 1092px) {
-  .d-header {
-    height: 4.5rem;
-  }
-
   .d-header > .wrap {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
