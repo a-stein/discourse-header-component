@@ -1,8 +1,17 @@
 import Component from "@glimmer/component";
+import { service } from "@ember/service";
 
 export default class NoGlobalHeader extends Component {
+  @service session;
+
+  get colorSchemeClass() {
+    return this.session.defaultColorSchemeIsDark
+      ? "no-global-header--dark"
+      : "no-global-header--light";
+  }
+
   <template>
-    <div class="no-global-header">
+    <div class="no-global-header {{this.colorSchemeClass}}">
       <a
         class="no-global-header-brand"
         href="https://nintendo-online.de/"

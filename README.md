@@ -22,9 +22,11 @@ Die Desktop-Navigation enthält fest diese Ziele:
 
 Das Forum ist mit einer gelben Unterstreichung als aktiver Bereich markiert. Das Logo liegt als lokales Theme-Asset unter `assets/logo.svg`.
 
-## Dark Mode
+## Fonts und Dark Mode
 
-Die Component verwendet Discourse-Farbvariablen, insbesondere `--header_background` und `--header_primary`. Daher folgt sie dem aktiven Discourse-Color-Scheme und nicht ausschließlich der Browser-Präferenz. Die Akzentfarbe bleibt `#FFC805`.
+Die Component lädt dieselben DM-Sans- und DM-Mono-Webfonts wie Nintendo-Online direkt von `nintendo-online.de`. Damit stimmen Font-Familien und Gewichte des Brandings (`DM Sans`, 900) sowie der Navigation (`DM Mono`, 500) mit der Hauptseite überein.
+
+Die helle Navigation folgt der Referenzfarbe `#454545`. Über Discourse' aktiven Color-Scheme-Status wechselt sie im Dark Mode auf die Referenzfarbe `#F8FAFC`; dafür wird nicht `prefers-color-scheme` verwendet. Die Akzentfarbe bleibt `#FFC805`.
 
 ## Mobiles Verhalten
 

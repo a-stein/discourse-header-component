@@ -4,6 +4,30 @@
   --no-header-foreground: var(--header_primary, var(--primary));
 }
 
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("https://nintendo-online.de/fonts/dm-sans/13971731025ec697-s.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "DM Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://nintendo-online.de/fonts/dm-mono/0e96d314a90a6138-s.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "DM Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("https://nintendo-online.de/fonts/dm-mono/b7ea2ab4a8ad1f81-s.woff2") format("woff2");
+}
+
 .d-header {
   background: var(--no-header-background);
   color: var(--no-header-foreground);
@@ -50,11 +74,11 @@
   flex: 0 0 auto;
   align-items: center;
   gap: 0.55rem;
-  color: var(--no-header-foreground);
+  color: #454545;
   text-decoration: none;
 
   &:visited {
-    color: var(--no-header-foreground);
+    color: #454545;
   }
 
   &:hover {
@@ -81,7 +105,7 @@
   font-size: clamp(1.2rem, 2.3vw, 2.25rem);
   font-weight: 900;
   letter-spacing: -0.03em;
-  line-height: 1;
+  line-height: 1.25;
 }
 
 .no-global-header-nav {
@@ -99,12 +123,12 @@
 }
 
 .no-global-header-nav a {
-  color: var(--no-header-foreground);
+  color: #454545;
   text-decoration: none;
   text-underline-offset: 5px;
 
   &:visited {
-    color: var(--no-header-foreground);
+    color: #454545;
   }
 
   &:hover {
@@ -122,6 +146,13 @@
   text-decoration: underline !important;
   text-decoration-color: var(--no-header-yellow) !important;
   text-decoration-thickness: 3px !important;
+}
+
+.no-global-header--dark .no-global-header-brand,
+.no-global-header--dark .no-global-header-brand:visited,
+.no-global-header--dark .no-global-header-nav a,
+.no-global-header--dark .no-global-header-nav a:visited {
+  color: #f8fafc;
 }
 
 @media (prefers-reduced-motion: reduce) {
