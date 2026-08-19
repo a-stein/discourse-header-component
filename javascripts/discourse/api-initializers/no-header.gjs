@@ -2,11 +2,11 @@ import { apiInitializer } from "discourse/lib/api";
 import NoGlobalHeader from "../components/no-global-header";
 
 const mobileLinks = [
-  ["no-news", "NEWS", "https://nintendo-online.de/news", "newspaper"],
-  ["no-spiele", "SPIELE", "https://nintendo-online.de/games", "gamepad"],
-  ["no-reviews", "REVIEWS", "https://nintendo-online.de/reviews", "star"],
-  ["no-reports", "REPORTS", "https://nintendo-online.de/reports", "file-lines"],
-  ["no-forum", "FORUM", "https://forum.nintendo-online.de/", "comments"],
+  ["no-news", "News", "https://nintendo-online.de/news", "newspaper"],
+  ["no-spiele", "Spiele", "https://nintendo-online.de/games", "gamepad"],
+  ["no-reviews", "Reviews", "https://nintendo-online.de/reviews", "star"],
+  ["no-reports", "Reports", "https://nintendo-online.de/reports", "file-lines"],
+  ["no-forum", "Forum", "https://forum.nintendo-online.de/", "comments"],
 ];
 
 export default apiInitializer((api) => {

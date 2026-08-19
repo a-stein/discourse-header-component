@@ -22,19 +22,19 @@ export default class NoGlobalHeader extends Component {
       </a>
 
       <nav class="no-global-header-nav" aria-label="Nintendo-Online Navigation">
-        <a href="https://nintendo-online.de/news">NEWS</a>
+        <a href="https://nintendo-online.de/news">News</a>
         <span aria-hidden="true">/</span>
-        <a href="https://nintendo-online.de/games">SPIELE</a>
+        <a href="https://nintendo-online.de/games">Spiele</a>
         <span aria-hidden="true">/</span>
-        <a href="https://nintendo-online.de/reviews">REVIEWS</a>
+        <a href="https://nintendo-online.de/reviews">Reviews</a>
         <span aria-hidden="true">/</span>
-        <a href="https://nintendo-online.de/reports">REPORTS</a>
+        <a href="https://nintendo-online.de/reports">Reports</a>
         <span aria-hidden="true">/</span>
         <a
           class="no-global-header-nav-active"
           href="https://forum.nintendo-online.de/"
           aria-current="page"
-        >FORUM</a>
+        >Forum</a>
       </nav>
     </div>
   </template>
