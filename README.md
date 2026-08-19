@@ -32,7 +32,7 @@ Die helle Navigation folgt der Referenzfarbe `#454545`. Im Dark Mode ist die Sch
 
 Unter `1024px` wird die breite Nintendo-Online-Navigation ausgeblendet. Suche, Benachrichtigungen, Avatar, Login und der native Sidebar-/Hamburger-Trigger verbleiben im Core-Header.
 
-Die Nintendo-Online-Links werden über die native Sidebar-API in eine eigene Gruppierung namens „Nintendo-Online“ aufgenommen. Enthalten sind `News`, `Spiele`, `Reviews` und `Reports` – jeweils mit Icon. `Forum` wird bewusst nicht in die Sidebar übernommen, da es bereits als aktiver Bereich in der Desktop-Navigation markiert ist. Das funktioniert für angemeldete und anonyme Besucher, sofern die Discourse-Sidebar aktiv ist.
+Die Nintendo-Online-Links werden über die native Sidebar-API in eine eigene Gruppierung namens „Nintendo-Online“ aufgenommen. Enthalten sind `News`, `Spiele`, `Reviews`, `Reports`, `Release-Kalender` und `Podcast` – jeweils mit Icon. `Forum` wird bewusst nicht in die Sidebar übernommen, da es bereits als aktiver Bereich in der Desktop-Navigation markiert ist. Das funktioniert für angemeldete und anonyme Besucher, sofern die Discourse-Sidebar aktiv ist.
 
 Bei Instanzen, die die Sidebar komplett deaktiviert haben und ausschließlich das Legacy-Hamburger-Menü einsetzen, ergänzt die Component keine Links in dieses Menü. Dafür existiert kein gleichwertig stabiler öffentlicher Erweiterungspunkt; ein DOM-Hack wird bewusst nicht eingesetzt.
 

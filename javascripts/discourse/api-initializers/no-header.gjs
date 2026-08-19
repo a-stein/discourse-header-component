@@ -2,10 +2,22 @@ import { apiInitializer } from "discourse/lib/api";
 import NoGlobalHeader from "../components/no-global-header";
 
 const noLinks = [
-  ["no-news", "News", "https://nintendo-online.de/news", "newspaper"],
-  ["no-spiele", "Spiele", "https://nintendo-online.de/games", "gamepad"],
+  ["no-news", "News", "https://nintendo-online.de/news", "scroll"],
+  ["no-spiele", "Spiele", "https://nintendo-online.de/games", "puzzle-piece"],
   ["no-reviews", "Reviews", "https://nintendo-online.de/reviews", "star"],
   ["no-reports", "Reports", "https://nintendo-online.de/reports", "file-lines"],
+  [
+    "no-release-kalender",
+    "Release-Kalender",
+    "https://nintendo-online.de/games/releases",
+    "calendar-days",
+  ],
+  [
+    "no-podcast",
+    "Podcast",
+    "https://nintendo-online.de/podcasts/pixel-polygone-plauderei",
+    "play",
+  ],
 ];
 
 export default apiInitializer((api) => {
