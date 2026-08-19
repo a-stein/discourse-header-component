@@ -152,6 +152,14 @@
   text-decoration-thickness: 3px !important;
 }
 
+// When a topic is scrolled, Discourse shows the topic title in the header
+// (`.extra-info-wrapper`). Give it the full header width by hiding the brand
+// text and navigation, keeping only the logo.
+.d-header .contents:has(.extra-info-wrapper) .no-global-header-title,
+.d-header .contents:has(.extra-info-wrapper) .no-global-header-nav {
+  display: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .no-global-header-brand,
   .no-global-header-nav a {

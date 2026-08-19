@@ -44,7 +44,8 @@ Der Core-Logo-Bereich wird per CSS ausgeblendet; die nativen Header-Icons und -M
 
 ## Bekannte Einschränkungen
 
-- Die Header-Höhe beträgt `72px` (4.5rem) und der Inhalt ist — wie auf Nintendo-Online — auf eine zentrierte `1092px`-Box begrenzt.
+- Die Header-Höhe beträgt `72px` (4.5rem).
+- Beim Scrollen innerhalb eines Themas zeigt Discourse den Topic-Titel im Header. Damit dieser Platz bekommt, blendet die Component in diesem Zustand den Brand-Text und die Navigation aus — nur das Logo bleibt sichtbar. Oben im Thema (nicht gescrollt) sind Brand und Navigation wie gewohnt sichtbar.
 - Auf extrem schmalen Desktop-Ansichten oder bei starkem Browser-Zoom kann der Core den Topic-Titel gegenüber dem Branding priorisieren. Die Header-Controls bleiben dabei nutzbar.
 
 ## Update-Hinweise
