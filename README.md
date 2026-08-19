@@ -26,7 +26,7 @@ Das Forum ist mit einer gelben Unterstreichung als aktiver Bereich markiert. Das
 
 Die Component lädt dieselben DM-Sans- und DM-Mono-Webfonts wie Nintendo-Online direkt von `nintendo-online.de`. Damit stimmen Font-Familien und Gewichte des Brandings (`DM Sans`, 900) sowie der Navigation (`DM Mono`, 500) mit der Hauptseite überein.
 
-Die helle Navigation folgt der Referenzfarbe `#454545`. Über Discourse' aktiven Color-Scheme-Status wechselt sie im Dark Mode auf die Referenzfarbe `#F8FAFC`; dafür wird nicht `prefers-color-scheme` verwendet. Die Akzentfarbe bleibt `#FFC805`.
+Die helle Navigation folgt der Referenzfarbe `#454545`. Im Dark Mode ist die Schriftfarbe Weiß (`#fff`). Umgesetzt wird das über `light-dark(#454545, #fff)`, das dem von Discourse gesetzten `color-scheme` folgt – nicht der Browser-Präferenz `prefers-color-scheme`. Die Akzentfarbe bleibt `#FFC805`.
 
 ## Mobiles Verhalten
 

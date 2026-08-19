@@ -2,6 +2,7 @@
   --no-header-yellow: #ffc805;
   --no-header-background: var(--header_background, var(--secondary));
   --no-header-foreground: var(--header_primary, var(--primary));
+  --no-header-text: light-dark(#454545, #fff);
 }
 
 @font-face {
@@ -75,10 +76,12 @@
   align-items: center;
   gap: 0.55rem;
   color: #454545;
+  color: var(--no-header-text);
   text-decoration: none;
 
   &:visited {
     color: #454545;
+    color: var(--no-header-text);
   }
 
   &:focus-visible {
@@ -98,6 +101,7 @@
 
 .no-global-header-title {
   color: #454545;
+  color: var(--no-header-text);
   font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: clamp(1.2rem, 2.3vw, 2.25rem);
   font-weight: 900;
@@ -122,11 +126,13 @@
 
 .no-global-header-nav a {
   color: #454545;
+  color: var(--no-header-text);
   text-decoration: none;
   text-underline-offset: 5px;
 
   &:visited {
     color: #454545;
+    color: var(--no-header-text);
   }
 
   &:hover {
@@ -144,17 +150,6 @@
   text-decoration: underline !important;
   text-decoration-color: var(--no-header-yellow) !important;
   text-decoration-thickness: 3px !important;
-}
-
-.no-global-header--dark .no-global-header-brand,
-.no-global-header--dark .no-global-header-brand:visited,
-.no-global-header--dark .no-global-header-nav a,
-.no-global-header--dark .no-global-header-nav a:visited {
-  color: #fff;
-}
-
-.no-global-header--dark .no-global-header-title {
-  color: #fff;
 }
 
 @media (prefers-reduced-motion: reduce) {
