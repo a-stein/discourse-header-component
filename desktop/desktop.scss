@@ -1,0 +1,31 @@
+@media screen and (min-width: 1024px) {
+  .d-header {
+    height: 5rem;
+  }
+
+  .d-header > .wrap {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .d-header .contents {
+    min-width: 0;
+  }
+
+  .d-header .panel {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1150px) {
+  .no-global-header-title {
+    font-size: 1.4rem;
+  }
+
+  .no-global-header-nav {
+    gap: 0.3rem;
+    margin-left: 1rem;
+    font-size: 0.75rem;
+  }
+}

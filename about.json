@@ -1,0 +1,12 @@
+{
+  "name": "Nintendo-Online Discourse Header",
+  "component": true,
+  "license_url": null,
+  "about_url": null,
+  "authors": "Nintendo-Online",
+  "theme_version": "1.0.0",
+  "minimum_discourse_version": "3.4.0",
+  "assets": {
+    "no-logo": "assets/logo.svg"
+  }
+}

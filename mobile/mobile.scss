@@ -1,0 +1,39 @@
+@media screen and (max-width: 1023px) {
+  .d-header {
+    height: 4.25rem;
+  }
+
+  .d-header .home-logo-wrapper-outlet {
+    overflow: hidden;
+  }
+
+  .no-global-header {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .no-global-header-logo {
+    width: 2.35rem;
+    height: 1.5rem;
+  }
+
+  .no-global-header-title {
+    overflow: hidden;
+    font-size: clamp(1rem, 5vw, 1.45rem);
+    text-overflow: ellipsis;
+  }
+
+  .no-global-header-nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .no-global-header-brand {
+    gap: 0.35rem;
+  }
+
+  .no-global-header-title {
+    font-size: 1rem;
+  }
+}
