@@ -30,7 +30,7 @@ Die helle Navigation folgt der Referenzfarbe `#454545`. Im Dark Mode ist die Sch
 
 ## Mobiles Verhalten
 
-Unter `1024px` wird die breite Nintendo-Online-Navigation ausgeblendet. Suche, Benachrichtigungen, Avatar, Login und der native Sidebar-/Hamburger-Trigger verbleiben im Core-Header.
+Unter `1092px` (dem `lg`-Breakpoint der Nintendo-Online-Vorlage) wird die breite Navigation ausgeblendet und ist dann nur noch über die Sidebar erreichbar. Suche, Benachrichtigungen, Avatar, Login und der native Sidebar-/Hamburger-Trigger verbleiben im Core-Header.
 
 Die Nintendo-Online-Links werden über die native Sidebar-API in eine eigene Gruppierung namens „Nintendo-Online“ aufgenommen. Enthalten sind `News`, `Spiele`, `Reviews`, `Reports`, `Release-Kalender` und `Podcast` – jeweils mit Icon. `Forum` wird bewusst nicht in die Sidebar übernommen, da es bereits als aktiver Bereich in der Desktop-Navigation markiert ist. Das funktioniert für angemeldete und anonyme Besucher, sofern die Discourse-Sidebar aktiv ist.
 
