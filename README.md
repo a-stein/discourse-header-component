@@ -32,22 +32,22 @@ Die helle Navigation folgt der Referenzfarbe `#454545`. Im Dark Mode ist die Sch
 
 Unter `1024px` wird die breite Nintendo-Online-Navigation ausgeblendet. Suche, Benachrichtigungen, Avatar, Login und der native Sidebar-/Hamburger-Trigger verbleiben im Core-Header.
 
-Die fünf Nintendo-Online-Links werden mit der nativen Sidebar-API in den Community-„More…“-Bereich aufgenommen. Das funktioniert für angemeldete und anonyme Besucher, sofern die Discourse-Sidebar aktiv ist.
+Die Nintendo-Online-Links werden über die native Sidebar-API in eine eigene Gruppierung namens „Nintendo-Online“ aufgenommen. Enthalten sind `News`, `Spiele`, `Reviews` und `Reports` – jeweils mit Icon. `Forum` wird bewusst nicht in die Sidebar übernommen, da es bereits als aktiver Bereich in der Desktop-Navigation markiert ist. Das funktioniert für angemeldete und anonyme Besucher, sofern die Discourse-Sidebar aktiv ist.
 
 Bei Instanzen, die die Sidebar komplett deaktiviert haben und ausschließlich das Legacy-Hamburger-Menü einsetzen, ergänzt die Component keine Links in dieses Menü. Dafür existiert kein gleichwertig stabiler öffentlicher Erweiterungspunkt; ein DOM-Hack wird bewusst nicht eingesetzt.
 
 ## Verwendete Discourse APIs
 
 - `api.renderInOutlet("header-contents__before", NoGlobalHeader)`: ergänzt den mehrfach belegbaren offiziellen Header-Outlet. Flex-Order positioniert den Brand-Bereich neben dem nativen Sidebar-Trigger.
-- `api.addCommunitySectionLink(...)`: ergänzt die Links in der nativen Community-Sidebar.
+- `api.addSidebarSection(...)`: ergänzt die eigene Sidebar-Gruppierung „Nintendo-Online“ mit Links zu den globalen Zielen.
 
 Der Core-Logo-Bereich wird per CSS ausgeblendet; die nativen Header-Icons und -Menüs werden nicht verändert. Das umfasst Suche, Benachrichtigungen, Chat, Login, Avatar und Staff-/Admin-Funktionen.
 
 ## Bekannte Einschränkungen
 
-- `DM Sans` und `DM Mono` werden nicht zusätzlich geladen. Sind sie im Host-Theme verfügbar, werden sie genutzt; ansonsten greifen die definierten System-Fallbacks. Das vermeidet externe Font-Requests und funktioniert auch mit restriktiven Content-Security-Policies.
+- Die Fonts `DM Sans` und `DM Mono` werden von `nintendo-online.de` geladen. Ist diese Quelle nicht erreichbar oder durch eine restriktive Content-Security-Policy blockiert, greifen die definierten System-Fallbacks.
 - Auf extrem schmalen Desktop-Ansichten oder bei starkem Browser-Zoom kann der Core den Topic-Titel gegenüber dem Branding priorisieren. Die Header-Controls bleiben dabei nutzbar.
 
 ## Update-Hinweise
 
-Die Component verwendet den aktuellen Glimmer-Header und offizielle APIs, keine veralteten Widget-APIs oder Selektor-basierte DOM-Manipulation. Bei Discourse-Updates sollten besonders `home-logo-wrapper` und `addCommunitySectionLink` gegen die jeweiligen Release Notes geprüft werden.
+Die Component verwendet den aktuellen Glimmer-Header und offizielle APIs, keine veralteten Widget-APIs oder Selektor-basierte DOM-Manipulation. Bei Discourse-Updates sollten besonders `header-contents__before` und `addSidebarSection` gegen die jeweiligen Release Notes geprüft werden.

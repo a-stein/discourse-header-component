@@ -1,25 +1,60 @@
 import { apiInitializer } from "discourse/lib/api";
 import NoGlobalHeader from "../components/no-global-header";
 
-const mobileLinks = [
+const noLinks = [
   ["no-news", "News", "https://nintendo-online.de/news", "newspaper"],
   ["no-spiele", "Spiele", "https://nintendo-online.de/games", "gamepad"],
   ["no-reviews", "Reviews", "https://nintendo-online.de/reviews", "star"],
   ["no-reports", "Reports", "https://nintendo-online.de/reports", "file-lines"],
-  ["no-forum", "Forum", "https://forum.nintendo-online.de/", "comments"],
 ];
 
 export default apiInitializer((api) => {
-  // This is a standard outlet, so it can coexist with other header components.
   api.renderInOutlet("header-contents__before", NoGlobalHeader);
 
-  mobileLinks.forEach(([name, text, href, icon]) => {
-    api.addCommunitySectionLink({
-      name,
-      text,
-      title: `${text} auf Nintendo-Online.de`,
-      href,
-      icon,
-    });
-  });
+  api.addSidebarSection(
+    (BaseCustomSidebarSection, BaseCustomSidebarSectionLink) => {
+      const links = noLinks.map(
+        ([name, text, href, icon]) =>
+          new (class extends BaseCustomSidebarSectionLink {
+            get name() {
+              return name;
+            }
+
+            get href() {
+              return href;
+            }
+
+            get title() {
+              return `${text} auf Nintendo-Online.de`;
+            }
+
+            get text() {
+              return text;
+            }
+
+            get prefixType() {
+              return "icon";
+            }
+
+            get prefixValue() {
+              return icon;
+            }
+          })()
+      );
+
+      return class extends BaseCustomSidebarSection {
+        get name() {
+          return "nintendo-online";
+        }
+
+        get text() {
+          return "Nintendo-Online";
+        }
+
+        get links() {
+          return links;
+        }
+      };
+    }
+  );
 });
