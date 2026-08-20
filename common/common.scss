@@ -1,8 +1,8 @@
 :root {
   --no-header-yellow: #ffc805;
-  --no-header-background: var(--header_background, var(--secondary));
-  --no-header-foreground: var(--header_primary, var(--primary));
-  --no-header-text: light-dark(#454545, #fff);
+  --no-header-background: light-dark(#fff, hsl(0 0% 13.3%));
+  --no-header-foreground: light-dark(#454545, hsl(210 40% 98%));
+  --no-header-text: light-dark(#454545, hsl(210 40% 98%));
 }
 
 @font-face {
@@ -145,12 +145,6 @@
     outline: 3px solid var(--no-header-yellow);
     outline-offset: 4px;
   }
-}
-
-.no-global-header-nav-active {
-  text-decoration: underline !important;
-  text-decoration-color: var(--no-header-yellow) !important;
-  text-decoration-thickness: 3px !important;
 }
 
 // When a topic is scrolled, Discourse shows the topic title in the header
