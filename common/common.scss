@@ -61,7 +61,6 @@
 
 .no-global-header {
   display: flex;
-  flex: 1 1 auto;
   align-items: center;
   min-width: 0;
   height: 100%;
@@ -70,7 +69,7 @@
 
 .no-global-header-brand {
   display: inline-flex;
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   min-width: 0;
   align-items: center;
   gap: 0.5rem;
@@ -116,7 +115,7 @@
   flex: 0 0 auto;
   align-items: center;
   gap: 1rem;
-  margin-left: 1rem;
+  margin-left: 4.5rem;
   overflow: hidden;
   font-family: "DM Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 1.125rem;
