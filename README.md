@@ -19,7 +19,7 @@ Die Desktop-Navigation enthält fest diese Ziele:
 - REVIEWS: `https://nintendo-online.de/reviews`
 - FORUM: `https://forum.nintendo-online.de/`
 
-Alle Desktop-Links folgen derselben Darstellung; das Forum erhält keine permanente Hervorhebung. Das Logo liegt als lokales Theme-Asset unter `assets/logo.svg`.
+Das Forum ist als aktueller Bereich gelb markiert. Das Logo liegt als lokales Theme-Asset unter `assets/logo.svg`.
 
 ## Fonts und Dark Mode
 

@@ -21,7 +21,7 @@ Die Component ergänzt den nativen Discourse-Header. Sie darf keinen zweiten Hea
 
 - Offizielle Discourse-Erweiterungspunkte verwenden. Keine DOM-Manipulation, veralteten Widget-APIs oder MutationObserver-Hacks einführen.
 - Den Core-Logo-Bereich darf die Component ausblenden; Core-Controls und ihre Events dürfen nicht überschrieben oder nachgebaut werden.
-- Alle Desktop-Links folgen derselben Darstellung; `Forum` erhält weder `aria-current` noch eine permanente Hervorhebung.
+- Der Desktop-Link `Forum` bezeichnet die aktuelle Seite mit `aria-current="page"` und gelber Schrift.
 - Unter `1092px` bleibt die breite Navigation verborgen. Die externen Ziele werden stattdessen über die native Sidebar-Sektion „Nintendo-Online“ angeboten.
 - Wenn Discourse in `.extra-info-wrapper` einen gescrollten Topic-Titel zeigt, werden Markenname und Navigation ausgeblendet; das Logo bleibt sichtbar und der Topic-Titel erhält Vorrang.
 - Light/Dark Mode folgt dem von Discourse gesetzten `color-scheme` über `light-dark(...)`, nicht ausschließlich `prefers-color-scheme`.

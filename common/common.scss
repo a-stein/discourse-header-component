@@ -147,6 +147,11 @@
   }
 }
 
+.no-global-header-nav a.no-global-header-nav-current,
+.no-global-header-nav a.no-global-header-nav-current:visited {
+  color: var(--no-header-yellow);
+}
+
 // When a topic is scrolled, Discourse shows the topic title in the header
 // (`.extra-info-wrapper`). Give it the full header width by hiding the brand
 // text and navigation, keeping only the logo.
