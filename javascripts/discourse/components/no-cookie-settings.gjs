@@ -38,19 +38,12 @@ export default class NoCookieSettings extends Component {
       catch { finish(true); }
     } });
     try {
-      if (typeof window.googlefc.showRevocationMessage !== "function") {
+      if (typeof window.googlefc.showRevocationMessage !== "function" &&
+          !window.googletag?.apiReady) {
         window.googletag ||= { cmd: [] };
-        await loadScript("https://securepubads.g.doubleclick.net/tag/js/gpt.js", { scriptTag: true });
-        if (expired || this.isDestroying || this.isDestroyed) { return; }
-        window.googletag.cmd.push(() => {
-          if (expired || this.isDestroying || this.isDestroyed) { return; }
-          if (!window.googletag.pubadsReady) {
-            // Bootstrap Google's CMP on pages without an ad slot. No slot is
-            // registered or requested by this privacy control.
-            window.googletag.setConfig({ disableInitialLoad: true });
-            window.googletag.enableServices();
-          }
-        });
+        // Identify the CMP account even when this page has no ad slot. Leave
+        // GPT service/loading configuration entirely to the advertising plugin.
+        await loadScript("https://securepubads.g.doubleclick.net/tag/js/gpt.js?network-code=23326979771", { scriptTag: true });
       }
     } catch { expired = true; finish(true); }
   }
