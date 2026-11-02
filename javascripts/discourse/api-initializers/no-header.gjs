@@ -1,5 +1,6 @@
 import { apiInitializer } from "discourse/lib/api";
 import NoGlobalHeader from "../components/no-global-header";
+import NoCookieSettings from "../components/no-cookie-settings";
 
 const noLinks = [
   ["no-news", "News", "https://nintendo-online.de/news", "scroll"],
@@ -22,6 +23,7 @@ const noLinks = [
 
 export default apiInitializer((api) => {
   api.renderInOutlet("header-contents__before", NoGlobalHeader);
+  api.renderInOutlet("sidebar-footer-actions", NoCookieSettings);
 
   api.addSidebarSection(
     (BaseCustomSidebarSection, BaseCustomSidebarSectionLink) => {

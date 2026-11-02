@@ -166,3 +166,24 @@
     transition: none;
   }
 }
+
+.sidebar-footer-actions:has(.no-cookie-settings) {
+  flex-wrap: wrap;
+}
+
+.no-cookie-settings {
+  flex-basis: 100%;
+  order: 10;
+  min-width: 0;
+
+  button {
+    white-space: normal;
+    text-align: left;
+  }
+
+  [role="status"] {
+    display: block;
+    font-size: var(--font-down-1);
+    color: var(--primary-medium);
+  }
+}

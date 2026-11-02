@@ -39,6 +39,7 @@ Bei Instanzen, die die Sidebar komplett deaktiviert haben und ausschließlich da
 
 - `api.renderInOutlet("header-contents__before", NoGlobalHeader)`: ergänzt den mehrfach belegbaren offiziellen Header-Outlet. Flex-Order positioniert den Brand-Bereich neben dem nativen Sidebar-Trigger.
 - `api.addSidebarSection(...)`: ergänzt die eigene Sidebar-Gruppierung „Nintendo-Online“ mit Links zu den globalen Zielen.
+- `api.renderInOutlet("sidebar-footer-actions", NoCookieSettings)`: ergänzt bei aktivem Nintendo-GAM-Netzwerk den Button „Cookie-Einstellungen“. Er öffnet Googles vorhandene CMP über `CONSENT_API_READY` und `showRevocationMessage()`, mit Lade- und Fehlerzustand. Auf Seiten ohne Anzeigen kann der Klick GPT für die CMP starten, ohne selbst Anzeigenplätze anzulegen oder Anzeigen anzufordern. Die Werbeauslieferung bleibt beim offiziellen Discourse Advertising Plugin.
 
 Der Core-Logo-Bereich wird per CSS ausgeblendet; die nativen Header-Icons und -Menüs werden nicht verändert. Das umfasst Suche, Benachrichtigungen, Chat, Login, Avatar und Staff-/Admin-Funktionen.
 
