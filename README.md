@@ -43,6 +43,10 @@ Bei Instanzen, die die Sidebar komplett deaktiviert haben und ausschließlich da
 
 Der Core-Logo-Bereich wird per CSS ausgeblendet; die nativen Header-Icons und -Menüs werden nicht verändert. Das umfasst Suche, Benachrichtigungen, Chat, Login, Avatar und Staff-/Admin-Funktionen.
 
+Der Cookie-Button wartet beim Erststart auf die tatsächlich verfügbare GoogleFC-API, bevor er den einmaligen Aufruf einreiht. Bereits vorhandene GPT-Skripte werden wiederverwendet; nach spätestens 20 Sekunden erscheint bei ausbleibender Bereitschaft ein erneuter Versuch. Timer werden beim Verlassen der Seite entfernt.
+
+Die gezielten Methodentests laufen mit Node 24 über `node --test tests/cookie-settings.test.cjs`. Sie prüfen Erststart, Wiederverwendung, Timeout und Aufräumen ohne Google-Anfragen; sie ersetzen keine Discourse-Browserprüfung.
+
 ## Bekannte Einschränkungen
 
 - Die Header-Höhe beträgt `72px` (4.5rem).
